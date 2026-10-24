@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { reviewText, unicodeIssues, spellEnglish, protectedSpans, applyIssue } from '../public/js/services/textcheck.js';
 
-const dict = new Set(readFileSync(new URL('../public/data/dict/en_US.words.txt', import.meta.url), 'utf8').split('\n'));
+const dict = new Set(readFileSync(new URL('../public/data/dict/en_US.words.txt', import.meta.url), 'utf8').split(/\r?\n/).map((w) => w.trim()).filter(Boolean));
 const sp = (t) => spellEnglish(t, dict).map((i) => i.word);
 
 test('english spelling flags typos and offers suggestions, never auto-edits', () => {

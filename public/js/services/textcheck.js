@@ -80,9 +80,9 @@ export function spellEnglish(text, dict, ignore = new Set()) {
   return out;
 }
 export async function loadEnglishDict(url = 'data/dict/en_US.words.txt') {
-  const inl = typeof window !== 'undefined' && window.__AIP_LIB__; if (inl && inl[url]) return new Set(inl[url].split('\n')); // single-file preview build
+  const inl = typeof window !== 'undefined' && window.__AIP_LIB__; if (inl && inl[url]) return new Set(inl[url].split(/\r?\n/).map((w) => w.trim()).filter(Boolean)); // single-file preview build
   const r = await fetch(url); if (!r.ok) throw new Error(`The English dictionary could not be loaded (${r.status}).`);
-  return new Set((await r.text()).split('\n'));
+  return new Set((await r.text()).split(/\r?\n/).map((w) => w.trim()).filter(Boolean));
 }
 export function reviewText(text, dict, ignore) { return [...unicodeIssues(text), ...(dict ? spellEnglish(text, dict, ignore) : [])].sort((x, y) => x.start - y.start); }
 export const applyIssue = (text, issue, replacement) => (issue.whole ? replacement : text.slice(0, issue.start) + replacement + text.slice(issue.end));
