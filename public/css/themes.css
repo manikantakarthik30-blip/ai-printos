@@ -1,0 +1,25 @@
+/* Themes: pure CSS custom-property overrides (see DESIGN.md). Default theme "studio" lives in app.css. */
+:root[data-theme=blueprint]{--ink:#0f2a43;--ink2:#35516b;--ink3:#566f87;--paper:#eef4fa;--surf:#fbfdff;--line:#b9cde0;--cyan:#0a6a8a;--mag:#0b5cad;--mag2:#094a8c;--yel:#f2b705;--focus:#0b5cad;--on-accent:#fff;--side-bg:#0b2239;--side-fg:#e4eef8;--side-fg2:#a9c2d9;--chip:#dce8f3;--sel:#dcebfa;--canvas:#d8e4ef;--r:2px;--font:ui-monospace,'SFMono-Regular',Menlo,Consolas,'Noto Sans Telugu','Nirmala UI','Gautami','Telugu Sangam MN',monospace;--head:var(--font)}
+:root[data-theme=void]{color-scheme:dark;--ink:#e8f1ec;--ink2:#b7c5bd;--ink3:#93a69b;--paper:#090d0b;--surf:#111816;--line:#25332d;--cyan:#5eead4;--mag:#34d399;--mag2:#10b981;--yel:#fbbf24;--danger:#ff8a80;--focus:#7cc4ff;--on-accent:#04140d;--side-bg:#060908;--side-fg:#e8f1ec;--side-fg2:#9fb2a8;--chip:#1c2723;--sel:#16332a;--canvas:#05080a;--r:6px}
+:root[data-theme=paper]{--ink:#2b2118;--ink2:#5b4d3f;--ink3:#74655a;--paper:#f7f1e6;--surf:#fffaf1;--line:#e0d4bf;--cyan:#0f6f74;--mag:#a63d2a;--mag2:#8a3121;--yel:#d99a00;--focus:#2a5bd7;--on-accent:#fff;--side-bg:#2b2118;--side-fg:#f3e9d8;--side-fg2:#cdbda4;--chip:#ece0cb;--sel:#f3e4c4;--canvas:#e8dcc5;--r:12px;--head:Georgia,'Times New Roman','Noto Serif Telugu','Nirmala UI',serif}
+:root[data-theme]{background:var(--paper)}
+:root[data-theme=void] .nl[aria-current=page]{background:rgba(52,211,153,.14)}
+:root[data-theme=void] .bdg.live{background:#12372b;color:#7ff0c4}
+:root[data-theme=void] .err,:root[data-theme=void] .toast.e{color:#ff8a80}
+:root[data-theme=void] .toast{background:#1c2723;color:var(--ink);border:1px solid var(--line)}
+:root[data-theme=void] dialog::backdrop{background:rgba(0,0,0,.7)}
+:root[data-theme]:not([data-theme=studio]) :is(.btn,.chip,.fld input:not([type=checkbox]):not([type=color]):not([type=range]),.fld select,textarea,.panel,.empty,.note,.prompt,.qi,.thumb,.tb,.insp,.lay button,.pl li,dialog,.toast,.seg){border-radius:var(--r)}
+:root[data-theme] :is(h1,h2,.brand span){font-family:var(--head)}
+:root[data-theme=blueprint] :is(.panel,.card,.qi,.prompt,.insp,.tb){border-style:solid;box-shadow:none}
+:root[data-theme=blueprint] body{background-image:linear-gradient(rgba(11,92,173,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(11,92,173,.05) 1px,transparent 1px);background-size:24px 24px}
+/* design-system preview page */
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.sw div{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surf);font-size:.75rem}
+.sw i{display:block;height:44px}.sw span{display:block;padding:6px 8px}.sw code{font-size:.6875rem}
+.ts p{margin:6px 0}
+.thm{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.thm button{width:100%;text-align:left;padding:12px;border:2px solid var(--line);border-radius:var(--r);background:var(--surf);color:var(--ink);font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:6px}
+.thm button[aria-pressed=true]{border-color:var(--focus)}
+.thm .dots{display:flex;gap:4px}.thm .dots i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(128,128,128,.4)}
+.chips .bdg{align-self:center;padding:3px 10px}
+:root[data-theme=void] .bdg.sample{background:#1c2723;color:var(--ink2)}

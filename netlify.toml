@@ -1,0 +1,21 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cc-embed.adobe.com https://*.cc-embed.adobe.com https://sdk.cc-embed.adobe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.adobe.com https://*.adobeprod.com https://cc-embed.adobe.com https://*.cc-embed.adobe.com; connect-src 'self' https://*.adobe.com https://*.adobe.io https://*.adobeprod.com https://*.adobelogin.com https://cc-embed.adobe.com https://*.cc-embed.adobe.com; frame-src https://*.adobe.com https://*.adobeprod.com https://cc-embed.adobe.com https://*.cc-embed.adobe.com https://*.adobelogin.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
