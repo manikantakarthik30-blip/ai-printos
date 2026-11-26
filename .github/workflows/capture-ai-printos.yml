@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/capture-ai-printos.yml"
+      - "scripts/capture-app-screenshots.cjs"
   workflow_dispatch:
 
 permissions:
