@@ -64,14 +64,25 @@ async function openSection(page, label) {
 
   try {
     await page.goto(base, { waitUntil: "networkidle", timeout: 60000 });
-    const newDesign = page.getByRole("button", { name: "New design" });
-    if (await newDesign.count()) {
-      await newDesign.click();
-      await page.waitForTimeout(1800);
-      await save(page, "07-editor.png");
+
+    // The home screen has two "New design" buttons. Target the primary action
+    // inside #main so Playwright never encounters a strict-mode ambiguity.
+    const primaryNewDesign = page.locator('#main button[data-act="new"]').first();
+    if (await primaryNewDesign.count()) {
+      await primaryNewDesign.click();
+    } else {
+      const labelledNewDesign = page.getByLabel("New design").first();
+      if (!(await labelledNewDesign.count())) {
+        throw new Error('Could not find the primary "New design" action.');
+      }
+      await labelledNewDesign.click();
     }
+
+    await page.waitForTimeout(1800);
+    await save(page, "07-editor.png");
   } catch (error) {
     console.error("Editor capture skipped:", error.message);
+    process.exitCode = 1;
   }
 
   await browser.close();
