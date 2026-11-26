@@ -1,6 +1,51 @@
 # AI PrintOS
 
-Frontend-only print design platform in **plain HTML, CSS and vanilla JavaScript** (ES modules, no framework, no build step, zero npm dependencies). Private API calls (Gemini, Canva) go through two tiny serverless functions so no secret ever reaches the browser.
+**A browser-based print design studio for creating, editing and exporting print-ready layouts.**
+
+AI PrintOS brings an editable design canvas, a large template library, multilingual typing tools and AI-assisted image generation into one lightweight web application. It is built with **HTML, CSS and vanilla JavaScript**, with serverless API routes for private integrations.
+
+<p align="center">
+  <a href="https://ai-printos.vercel.app/"><strong>Open Live Application</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/manikantakarthik30-blip/ai-printos"><strong>View Source Code</strong></a>
+</p>
+
+## Live Application
+
+| Resource | Link |
+|---|---|
+| Live deployment | https://ai-printos.vercel.app/ |
+| Source repository | https://github.com/manikantakarthik30-blip/ai-printos |
+| Deployment platform | Vercel |
+
+## Application Output Gallery
+
+The following images are **real template preview assets included in this repository** and served by the application. They show examples of the design output users can open and customise in AI PrintOS.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/manikantakarthik30-blip/ai-printos/main/public/templates/wedding-invitations/wi-001.webp" alt="AI PrintOS wedding invitation template preview" width="100%">
+      <br><strong>Wedding Invitation</strong>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/manikantakarthik30-blip/ai-printos/main/public/templates/posters/po-001.webp" alt="AI PrintOS poster template preview" width="100%">
+      <br><strong>Poster Design</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/manikantakarthik30-blip/ai-printos/main/public/templates/visiting-cards/vc-001.webp" alt="AI PrintOS visiting card template preview" width="100%">
+      <br><strong>Visiting Card</strong>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/manikantakarthik30-blip/ai-printos/main/public/templates/brochures/br-001.webp" alt="AI PrintOS brochure template preview" width="100%">
+      <br><strong>Brochure</strong>
+    </td>
+  </tr>
+</table>
+
+> **Screenshot note:** These are authentic in-app design previews from the repository, not fabricated interface screenshots. A separate capture of the live application UI has not been added yet.
 
 ## Features
 
