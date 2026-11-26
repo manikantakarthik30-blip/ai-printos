@@ -18,6 +18,21 @@ AI PrintOS brings an editable design canvas, a large template library, multiling
 | Source repository | https://github.com/manikantakarthik30-blip/ai-printos |
 | Deployment platform | Vercel |
 
+## Live Application Features
+
+AI PrintOS is a browser-based design workspace that helps users create print materials, customise layouts and prepare files for download.
+
+- **Design Editor:** Create and customise designs with text, shapes and images; arrange layers and use undo/redo.
+- **Template Library:** Browse, search and customise 500 templates across visiting cards, posters, flyers, brochures, banners, labels, product catalogs and invitations.
+- **AI Image Generation:** Generate images from text prompts and add them to a design using the Gemini-powered feature.
+- **Projects:** Manage designs saved in the browser and reopen them for further editing.
+- **Product Catalog:** Explore standard print sizes and dimensions to plan a design.
+- **Language Studio & Keyboard:** Work with English, Telugu and Hindi text, including phonetic typing support.
+- **Export & Integrations:** Download designs as PNG, PDF, SVG or project JSON, with Canva and Adobe Express integration options.
+- **Appearance & Settings:** Switch visual themes and configure available application preferences.
+
+**In short:** AI PrintOS combines a template-driven editor, multilingual text tools and AI-assisted image creation in one web app. Projects are stored locally in the browser; cloud accounts and cloud project sync are not currently provided.
+
 ## Application Output Gallery
 
 The following images are **real template preview assets included in this repository** and served by the application. They show examples of the design output users can open and customise in AI PrintOS.
