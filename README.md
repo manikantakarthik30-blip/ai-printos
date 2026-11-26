@@ -33,9 +33,56 @@ AI PrintOS is a browser-based design workspace that helps users create print mat
 
 **In short:** AI PrintOS combines a template-driven editor, multilingual text tools and AI-assisted image creation in one web app. Projects are stored locally in the browser; cloud accounts and cloud project sync are not currently provided.
 
-## Application Output Gallery
+## Application Screenshots
 
-The following images are **real template preview assets included in this repository** and served by the application. They show examples of the design output users can open and customise in AI PrintOS.
+The following screenshots were captured directly from the **live deployed AI PrintOS application** using an automated browser run. They show the actual application interface, not mockups or generated illustrations.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/01-home.png" alt="AI PrintOS live application home screen" width="100%">
+      <br><strong>01 · Home</strong>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/02-templates.png" alt="AI PrintOS live template library screen" width="100%">
+      <br><strong>02 · Templates</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/03-catalog.png" alt="AI PrintOS live print product catalog screen" width="100%">
+      <br><strong>03 · Product Catalog</strong>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/04-projects.png" alt="AI PrintOS live projects screen" width="100%">
+      <br><strong>04 · Projects</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/05-language-studio.png" alt="AI PrintOS live language studio screen" width="100%">
+      <br><strong>05 · Language Studio</strong>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/06-settings.png" alt="AI PrintOS live settings screen" width="100%">
+      <br><strong>06 · Settings</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/07-editor.png" alt="AI PrintOS live design editor screen" width="100%">
+      <br><strong>07 · Design Editor</strong>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://ai-printos.vercel.app/"><strong>Open AI PrintOS</strong></a>
+      <br>Explore the live application and create a design.
+    </td>
+  </tr>
+</table>
+
+### Template Preview Gallery
+
+These are real editable template preview assets included in the application repository.
 
 <table>
   <tr>
@@ -59,8 +106,6 @@ The following images are **real template preview assets included in this reposit
     </td>
   </tr>
 </table>
-
-> **Screenshot note:** These are authentic in-app design previews from the repository, not fabricated interface screenshots. A separate capture of the live application UI has not been added yet.
 
 ## Features
 
